@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_first_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.obesityuae.FirstSurvey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/horizontalprogressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/progressBarId3"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressTxt3"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Condition"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="You"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you snore?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/snore"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/snore"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/snoreText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you suffer from insomnia (difficulty of falling asleep)?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/insomnia"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/insomnia"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/insomniaText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you suffer from morning headache?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/morningheadache"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/morningheadache"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/morningheadacheText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you suffer from narcolepsy (sudden sleep attacks at work or school)?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/narcolepsy"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/narcolepsy"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/narcolepsyText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you suffer from fertility?"                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/fertility"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/fertility"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/fertilityText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you suffer from any back or joint pain?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/backjointpain"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/backJoint"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/backJointText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="4"
+                    android:text="Do you suffer from any skin infection?"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/skininfection"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/skin"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Hit the button!"
+                    android:id="@+id/skinText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Condition"
+                android:gravity="center"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You"
+                android:gravity="center" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@drawable/edit_text_background">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Family"
+                android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:text="Do you or any of your family member(s) suffer fom any heart disease(s)?"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/heart"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/uHeart"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/uHeartText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".25"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/heart"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/fHeart"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/fHeartText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you or any of your family member(s) suffer fom hypertension?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/hypertension"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/uHyper"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/uHyperText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".25"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/hypertension"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/fHyper"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/fHyperText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you or any of your family member(s) suffer fom diabetes?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/diabetes"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/uDiabetes"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/uDiabetesText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".25"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/diabetes"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/fDiabetes"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/fDiabetesText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you or any of your family member(s) suffer fom cancer?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/cancer"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/uCancer"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/uCancerText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".25"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/cancer"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/fCancer"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/fCancerText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/edit_text_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Do you or any of your family member(s) suffer fom any thyroid condition?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/thyroid"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/thyroid"
+                    android:layout_gravity="center">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/thyroidText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".25"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/thyroid"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/thyroidFamily"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11dp"
+                    android:text="Hit the button!"
+                    android:id="@+id/thyroidFamilyText"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Back"
+                android:id="@+id/pageThreeBack"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Next"
+                android:id="@+id/pageThreeNext"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>

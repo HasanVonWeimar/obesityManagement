@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_first_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.obesityuae.FirstSurvey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/horizontalprogressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/progressBarId2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressTxt2"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="How Often Do You Exercise Weekly"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/horizontal1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/sleeping"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/surveySleeping"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="None"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/streches"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/surveyStreches"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="1-2 Days"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/exerciseScroll">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/medworkout"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/surveyMedWorkout"
+                        android:layout_gravity="center">
+                    </ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="3-4 Days"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/heavylifting"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/surveyHeavyLifting"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="+5 Days"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Work Activity"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="5dp"
+                    android:src="@drawable/officeworkdesk"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/surveyOfficeDesk"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="No Activity"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="5dp"
+                    android:src="@drawable/runningmanwork"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/surveyRunningMan"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Slightly Active"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="5dp"
+                    android:src="@drawable/constructionworker"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/surveyConstructionWorker"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Very Active"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Education"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:id="@+id/horizontal2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/education"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/primary"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Primary School"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/education"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/highschool"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="High School"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/education"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/bachelor"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Bachelor Degree"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="20dp">
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:padding="5dp"
+                        android:src="@drawable/education"
+                        android:scaleType="fitCenter"
+                        style="@style/circularButton"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/postgrad"
+                        android:layout_gravity="center">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Postgraduate Degree"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="How long have you been using mobile phones"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/mobilephone"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/mobileusage1"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Less than 1 Year"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/mobilephone"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/mobileusage2"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="More than 2 Years"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="and less than 5 Years"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/mobilephone"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/mobileusage3"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="More than 5 Years"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Do you use the internet?"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="5dp"
+                    tools:ignore="ContentDescription"
+                    android:src="@drawable/internet"
+                    android:scaleType="fitCenter"
+                    style="@style/circularButton"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/internetTrueFalse"
+                    android:layout_gravity="center">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/internetText"
+                    android:text="Hit the button!"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="If you answered yes to the previous question, how many years have you been using the internet for?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/internetEditBox"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textAlignment="center"
+                    android:hint="1-120"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Back"
+                android:id="@+id/pageTwoBack"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Next"
+                android:id="@+id/pageTwoNext"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

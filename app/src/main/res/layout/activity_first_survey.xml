@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/FirstScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first_survey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.obesityuae.FirstSurvey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/horizontalprogressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBarId"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressTxt1"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            style="@style/editText_style"
+            android:layout_weight="1"
+            android:textColor="@color/myBlack"
+            android:hint="Height (cm)"
+            android:inputType="numberDecimal"
+            android:id="@+id/surveyHeight"
+            android:imeOptions="actionDone"/>
+        <EditText
+            style="@style/editText_style"
+            android:layout_weight="1"
+            android:textColor="@color/myBlack"
+            android:hint="Weight (kg)"
+            android:inputType="number"
+            android:id="@+id/surveyWeight"
+            android:imeOptions="actionDone"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            style="@style/editText_style"
+            android:layout_weight="1"
+            android:textColor="@color/myBlack"
+            android:hint="@string/edittext_hint"
+            android:inputType="number"
+            android:id="@+id/surveyWaist"
+            android:imeOptions="actionDone"/>
+        <EditText
+            style="@style/editText_style"
+            android:layout_weight="1"
+            android:textColor="@color/myBlack"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Age"
+            android:id="@+id/surveyAge"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Gender"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/male"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyMale"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Male"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/female"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyfemale"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="female"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Martial Status"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/single"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveySingle"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Single"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="7dp"
+                android:src="@drawable/marriage"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyMarried"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Married"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/divorced"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyDivorced"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Divorced"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Spinner
+        android:layout_marginTop="15dp"
+        android:id="@+id/surveyNationality"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/customborder"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        />
+
+    <Spinner
+        android:layout_marginTop="15dp"
+        android:id="@+id/surveyCity"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/customborder"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Residence Type"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/rural"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyRural"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Rural"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/urban"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyUrban"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Urban"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="House Income"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/moneybills"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveylessThanTen"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Less than"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="10k"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="7dp"
+                android:src="@drawable/moneysack"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyTwenty"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="between"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="10k and 20k"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="5dp"
+                android:src="@drawable/treasurechest"
+                android:scaleType="fitCenter"
+                style="@style/circularButton"
+                android:adjustViewBounds="true"
+                android:id="@+id/surveyGreaterThanTwenty"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="More than"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="20k"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="Next"
+            android:id="@+id/pageOneNext"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+</ScrollView>

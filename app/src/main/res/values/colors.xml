@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#3498db</color>
+    <color name="myWhitet">#eeffffff</color>
+    <color name="startColour">#3498db</color>
+    <color name="endColour">#26C6DA</color>
+    <color name="myBlack">#000000</color>
+    <color name="myGray">#CCCCCC</color>
+    <color name="borderColor">#D3D3D3</color>
+    <color name="ColorHint">#A7A7A7</color>
+    <color name="progressColor">#02c751</color>
+    <color name="crimsonRed">#DC143C</color>
+    <color name="lighterRed">#fc1d2c</color>
+    <color name="normal">#75aa42</color>
+    <color name="stage0">#ef9b21</color>
+    <color name="stage1">#e46b1a</color>
+    <color name="stage2">#dd2326</color>
+</resources>
