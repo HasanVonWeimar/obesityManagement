@@ -7,6 +7,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -40,7 +41,7 @@ public class FourthSurvey extends AppCompatActivity {
         done = (Button)findViewById(R.id.pageFourNext);
         mProgress = (ProgressBar)findViewById(R.id.progressBarId4);
         mProgressTxt = (TextView)findViewById(R.id.progressTxt4);
-        person = (Person)getApplication();
+        person = new Person();
         final AudioManager audio = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.myclicksound);
 
@@ -67,22 +68,67 @@ public class FourthSurvey extends AppCompatActivity {
                         mp.start();
 
                     MessageServices taskService = ServiceBuilder.buildService(MessageServices.class);
-                    Call<Person> createRequest = taskService.createPatient(person);
+                    Person patient = new Person();
+
+                     patient.setProgress(person.getProgress());
+                    patient.setWaist(person.getWaist());
+                    patient.setGender(person.getGender());
+                    patient.setMartial(person.getMartial());
+                     patient.setHeight(person.getHeight());
+                    patient.setWeight(person.getWeight());
+                   patient.setNationality(person.getNationality());
+                    patient.setResidence(person.getResidence());
+                    patient.setResidenceType(person.getResidenceType());
+                    patient.setIncome(person.getIncome());
+                    patient.setExercise(person.getExercise());
+                    patient.setWorkActivity(person.getWorkActivity());
+                    patient.setEducation(person.getEducation());
+                    patient.setMobilePhones(person.getMobilePhones());
+                    patient.setInternet(person.getInternet());
+                    patient.setInternetYears(person.getInternetYears());
+                    patient.setuSnore(person.getuSnore());
+                    patient.setuInsomnia(person.getuInsomnia());
+                    patient.setuHeadache(person.getuHeadache());
+                    patient.setuNarcolepsy(person.getuNarcolepsy());
+                    patient.setuFertility(person.getuFertility());
+                    patient.setuBackJoint(person.getuBackJoint());
+                    patient.setuSkin(person.getuSkin());
+                    patient.setuThyroid(person.getuThyroid());
+                    patient.setuHeart(person.getuHeart());
+                    patient.setuHypertension(person.getuHypertension());
+                    patient.setuDiabetes(person.getuDiabetes());
+                    patient.setuCancer(person.getuCancer());
+                    patient.setfThyroid(person.getfThyroid());
+                    patient.setfHeart(person.getfHeart());
+                    patient.setfHypertension(person.getfHypertension());
+                    patient.setfDiabetes(person.getfDiabetes());
+                    patient.setfCancer(person.getfCancer());
+                    patient.setDay(person.getDay());
+                    patient.setMonth(person.getMonth());
+                    patient.setYear(person.getYear());
+                    patient.setDiet(person.getDiet());
+                    patient.setProgressText(person.getProgressText());
+                    patient.setId(person.getId());
+
+                    Call<Person> createRequest = taskService.createPatient(patient);
                     createRequest.enqueue(new Callback<Person>() {
                         @Override
                         public void onResponse(Call<Person> call, Response<Person> response) {
+                            //response.code();
+                            Log.d("retrofit", "worked");
+                            Toast.makeText(FourthSurvey.this, "worked", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(FourthSurvey.this, MainScreen.class);
+                            intent.putExtra("patient", person);
                             startActivity(intent);
                         }
 
                         @Override
                         public void onFailure(Call<Person> call, Throwable t) {
-
+                            Log.d("retrofit", "didnt work");
                             Toast.makeText(FourthSurvey.this, "Failed", Toast.LENGTH_SHORT).show();
                         }
                     });
-                    Intent intent = new Intent(FourthSurvey.this, MainScreen.class);
-                    startActivity(intent);
+
                 }
                 else
                 {
@@ -111,6 +157,12 @@ public class FourthSurvey extends AppCompatActivity {
 
     private void startFourthActiviy()
     {
+        Intent intent = getIntent();
+        if (intent.hasExtra("patient")) {
+            Log.d("intent","is working");
+            person = (Person)intent.getSerializableExtra("patient");
+        }
+
         mProgress.setProgress(person.getProgress());
         mProgressTxt.setText(person.getProgressText());
         if(person.getDiet().length() >0)

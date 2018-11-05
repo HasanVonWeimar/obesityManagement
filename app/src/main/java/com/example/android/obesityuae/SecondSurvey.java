@@ -65,7 +65,6 @@ public class SecondSurvey extends AppCompatActivity {
         internetBox = (EditText)findViewById(R.id.internetEditBox);
         internetTextView = (TextView)findViewById(R.id.internetText);
         mProgress = (ProgressBar)findViewById(R.id.progressBarId2);
-        person = (Person)getApplication();
         primary = (ImageButton)findViewById(R.id.primary);
         secondary = (ImageButton)findViewById(R.id.highschool);
         bachelor = (ImageButton)findViewById(R.id.bachelor);
@@ -74,6 +73,7 @@ public class SecondSurvey extends AppCompatActivity {
         twoYear = (ImageButton)findViewById(R.id.mobileusage2);
         threeYear = (ImageButton)findViewById(R.id.mobileusage3);
         progressTxt = (TextView)findViewById(R.id.progressTxt2);
+        person = new Person();
         //exerciseScroll = (HorizontalScrollView)findViewById(R.id.horizontal1);
         //educationScroll = (HorizontalScrollView)findViewById(R.id.horizontal2);
         //exScroll = (LinearLayout)findViewById(exerciseScroll);
@@ -126,6 +126,7 @@ public class SecondSurvey extends AppCompatActivity {
                     mp.start();
 
                 Intent intent = new Intent(SecondSurvey.this, FirstSurvey.class);
+                intent.putExtra("patient", person);
                 startActivity(intent);
             }
         });
@@ -136,13 +137,17 @@ public class SecondSurvey extends AppCompatActivity {
                 if(audio.getRingerMode() == AudioManager.RINGER_MODE_NORMAL)
                     mp.start();
 
+                Intent intent = new Intent(SecondSurvey.this, ThirdSurvey.class);
+                intent.putExtra("patient", person);
+                startActivity(intent);
+
                 if(checkSurvey()) {
                     if(person.getProgress() == 25)
                     {
                         person.setProgress(50);
                     }
-                    Intent intent = new Intent(SecondSurvey.this, ThirdSurvey.class);
-                    startActivity(intent);
+                    /*Intent intent = new Intent(SecondSurvey.this, ThirdSurvey.class);
+                    startActivity(intent);*/
                 }
             }
         });
@@ -326,7 +331,10 @@ public class SecondSurvey extends AppCompatActivity {
         });*/
 
 
-
+        Intent intent = getIntent();
+        if (intent.hasExtra("patient")) {
+            person = (Person)intent.getSerializableExtra("patient");
+        }
 
         mProgress.setProgress(person.getProgress());
         progressTxt.setText(person.getProgressText());

@@ -77,7 +77,7 @@ public class FirstSurvey extends AppCompatActivity {
         height = (EditText) findViewById(R.id.surveyHeight);
         weight = (EditText) findViewById(R.id.surveyWeight);
         waist = (EditText) findViewById(R.id.surveyWaist);
-        person = (Person)getApplication();
+        person = new Person();
         mProgress = (ProgressBar)findViewById(R.id.progressBarId);
         mProgressTxt = (TextView)findViewById(R.id.progressTxt1);
         myScroll = (ScrollView)findViewById(R.id.FirstScrollView);
@@ -323,11 +323,11 @@ public class FirstSurvey extends AppCompatActivity {
                 if((height.getText().toString()).length() > 0) {
                     person.setHeight(Double.valueOf(height.getText().toString()));
                 }
-                   if(person.getHeight() == 555)
+                  /* if(person.getHeight() == 555)
                     {
-                        Intent intent = new Intent(FirstSurvey.this, SecondSurvey.class);
+                       Intent intent = new Intent(FirstSurvey.this, SecondSurvey.class);
                         startActivity(intent);
-                    }
+                    }*/
 
 
                /* if((weight.getText().toString()).length() > 0) {
@@ -342,14 +342,18 @@ public class FirstSurvey extends AppCompatActivity {
                 if((waist.getText().toString()).length() > 0)
                     person.setWaist(Integer.valueOf(waist.getText().toString()));
 
+                Intent intent = new Intent(FirstSurvey.this, SecondSurvey.class);
+                intent.putExtra("patient", person);
+                startActivity(intent);
+
                 if(checkSurvey()) {
 
                     if(person.getProgress()==0) {
                         person.setProgress(25);
                         person.setProgressText("25%");
                     }
-                    Intent intent = new Intent(FirstSurvey.this, SecondSurvey.class);
-                    startActivity(intent);
+                  /*  Intent intent = new Intent(FirstSurvey.this, SecondSurvey.class);
+                    startActivity(intent);*/
                 }
             }
         });
@@ -359,6 +363,13 @@ public class FirstSurvey extends AppCompatActivity {
 
     private void startFirstSurvey()
     {
+        Intent intent = getIntent();
+
+        if (intent.hasExtra("patient")) {
+            Log.d("intenttt","works fine");
+            person = (Person)intent.getSerializableExtra("patient");
+        }
+
         mProgress.setProgress(person.getProgress());
         mProgressTxt.setText(person.getProgressText());
         selectGender(person.getGender());

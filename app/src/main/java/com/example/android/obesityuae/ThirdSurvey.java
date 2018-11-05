@@ -92,7 +92,8 @@ public class ThirdSurvey extends AppCompatActivity {
         fDiabetesText = (TextView)findViewById(R.id.fDiabetesText);
         uCancerText = (TextView)findViewById(R.id.uCancerText);
         fCancerText = (TextView)findViewById(R.id.fCancerText);
-        person = (Person)getApplication();
+        //person = (Person)getApplication();
+        person = new Person();
         mProgress = (ProgressBar)findViewById(R.id.progressBarId3);
         mProgressTxt = (TextView)findViewById(R.id.progressTxt3);
         final AudioManager audio = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
@@ -330,6 +331,7 @@ public class ThirdSurvey extends AppCompatActivity {
                 if(audio.getRingerMode() == AudioManager.RINGER_MODE_NORMAL)
                     mp.start();
                 Intent intent = new Intent(ThirdSurvey.this, SecondSurvey.class);
+                intent.putExtra("patient", person);
                 startActivity(intent);
             }
         });
@@ -337,13 +339,16 @@ public class ThirdSurvey extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(ThirdSurvey.this, FourthSurvey.class);
+                intent.putExtra("patient", person);
+                startActivity(intent);
                 if(audio.getRingerMode() == AudioManager.RINGER_MODE_NORMAL)
                     mp.start();
                 if(check()) {
                     person.setProgress(75);
                     person.setProgressText("75%");
-                    Intent intent = new Intent(ThirdSurvey.this, FourthSurvey.class);
-                    startActivity(intent);
+                   /* Intent intent = new Intent(ThirdSurvey.this, FourthSurvey.class);
+                    startActivity(intent);*/
                 }
             }
         });
@@ -641,6 +646,11 @@ public class ThirdSurvey extends AppCompatActivity {
 
     private void startThirdActivity()
     {
+        Intent intent = getIntent();
+        if (intent.hasExtra("patient")) {
+            person = (Person)intent.getSerializableExtra("patient");
+        }
+
         mProgress.setProgress(person.getProgress());
         mProgressTxt.setText(person.getProgressText());
         snoreStart();

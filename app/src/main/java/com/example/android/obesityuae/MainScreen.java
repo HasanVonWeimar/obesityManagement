@@ -1,7 +1,10 @@
 package com.example.android.obesityuae;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,6 +27,7 @@ public class MainScreen extends AppCompatActivity {
     private int stage = -1;
     private List <String> reasons;
     private String reasonsText = "";
+    private Button newsFeed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +40,22 @@ public class MainScreen extends AppCompatActivity {
         mBMICase = (TextView)findViewById(R.id.BMICase);
         stageText = (TextView)findViewById(R.id.stageText);
         stageReasons = (TextView)findViewById(R.id.stageReasonsText);
-        person = (Person)getApplication();
+        newsFeed = (Button)findViewById(R.id.newsFeed);
+        person = new Person();
         reasons = new ArrayList<>();
         double tmp;
-        tmp = person.getWeight()/((person.getHeight()/100.0)*(person.getHeight()/100.0));
-
+        //tmp = person.getWeight()/((person.getHeight()/100.0)*(person.getHeight()/100.0));
+        tmp = 25.24;
         BMI = round(tmp, 2);
 
         checkBMI(BMI);
+
+        newsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, NewsFeed.class));
+            }
+        });
 
     }
 
@@ -74,11 +86,11 @@ public class MainScreen extends AppCompatActivity {
                     stage = 2;
                 }
                 reasons.add("Hypertension");
-               /* mBMILayout.setBackgroundResource(R.color.stage2);
+                mBMILayout.setBackgroundResource(R.color.stage2);
                 mBMIText.setText(String.valueOf(BMI));
                 mTreatmentText.setText("Treatment:");
                 mBMICase.setText("Overweight : Stage 2");
-                mTreatmentMethodsText.setText(getString(R.string.stage2));*/
+                mTreatmentMethodsText.setText(getString(R.string.stage2));
             }
 
             if(person.getuHeart() == 1)

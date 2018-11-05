@@ -1,12 +1,22 @@
 package com.example.android.obesityuae;
 
-import android.app.Application;
+import java.io.Serializable;
 
 /**
  * Created by shaheen on 4/11/2018.
  */
 
-public class Person extends Application {
+public class Person implements Serializable {
+
+    private int id = -1;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     private int progress=0, waist=-1, gender=-1, martial=-1;
     private double height=-1, weight=-1;
