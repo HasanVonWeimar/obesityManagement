@@ -221,4 +221,8 @@
         <item>Zimbabwe</item>
 
     </string-array>
+
+    <string name="com_auth0_client_id">kyX9rr8wHi9KPcLHsRVmW0Y9sR1mVN2E</string>
+    <string name="com_auth0_domain">obesitymnguae.eu.auth0.com</string>
+
 </resources>
